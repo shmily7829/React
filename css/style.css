@@ -1,0 +1,118 @@
+button {
+  background-color: tomato;
+  padding: 10px 15px;
+}
+
+button:hover {
+  background-color: teal;
+}
+
+button:active {
+  background-color: white;
+}
+.clearfix {
+  clear: both;
+}
+
+.box1 {
+  background-color: antiquewhite;
+  color: royalblue;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  font-weight: bold;
+
+  font: normal 16px Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+
+  border: 5px blueviolet;
+  border-right: 5px red solid;
+  border-left: 8px blue solid;
+  border-top: 10px green solid;
+  border-bottom: 3px yellow solid;
+
+  border-style: dashed;
+
+  /* padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  scroll-padding-left: 10px; */
+
+  padding: 5px;
+}
+
+.box2 {
+  width: 100%;
+  margin: 20px 0;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.list {
+  background-color: yellowgreen;
+  border: 5px dotted #cccccc;
+  border-radius: 35px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.block {
+  float: left;
+  width: 33.3%;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+#main-block {
+  float: left; /*'向左對齊*/
+  width: 70%;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+#sidebar {
+  float: right;
+  width: 30%;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+.list2 li:nth-child(even) {
+  background-color: gray;
+}
+
+.list2 li:first-child {
+  background-color: red;
+}
+
+.list2 li:last-child {
+  background-color: green;
+}
+
+.list2 li:nth-child(3) {
+  color: aqua;
+}
+
+.position-box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.position-box h1 {
+  position: absolute;
+  top: 50px;
+}
+
+.position-box h2 {
+  position: absolute;
+  right: 30px;
+}
+
+#fixed{
+    position: fixed;
+    right: 0;
+    bottom: 200px;
+}

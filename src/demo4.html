@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <P id="error">字數不超過10字</P>
+    <script>
+        var input = document.getElementById('input')
+        var errorMsg = document.getElementById('error')
+
+        //Model
+        //初始化狀態值
+        var state = {
+            value ="",
+            error: false
+        }
+
+        //取得初始狀態值,並給狀態賦予新值
+        //進行渲染
+        var setState = function (newState) {
+            state = {
+                ...state,
+                ...newState
+            }
+            render()
+        }
+
+        //View
+        var render = function () {
+            input.value = state.value
+
+            //error時鎖住欄位
+            if (state.error) {
+                errorMsg.style.display = 'block'
+            }
+            else {
+                errorMsg.style.display = 'none'
+            }
+        }
+
+        //輸入事件處理
+        //字數符合 更新value ; 字數不符合 更新error
+        var hanleInput = function (value) {
+            if (value.length < 10) {
+                setState({
+                    value: value,
+                })
+            }
+            else {
+                setState({
+                    error: true
+                })
+            }
+        }
+
+        //Control
+        //監控input狀態
+        input.addEventListener('input', function () {
+            hanleInput(this.value)
+        })
+    </script>
+
+</body>
+
+</html>
