@@ -29,10 +29,10 @@
         var obj = {
             name : "1",
             f: function(){
-                //this.f.bind(this) //obj本身
+                //this.f.bind(this) //指的是obj這個物件本身
                 var me = this
                 window.setTimeout(function(){
-                    console.log(me.name)//this指向window  this.name => window.name
+                    console.log(me.name,"in timeout")//this指向window  this.name => window.name
                 },100)
             },
             fn: function(){
